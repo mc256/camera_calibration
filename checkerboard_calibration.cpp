@@ -123,6 +123,7 @@ void Checkerboard_Calibration::run_calibration(){
         cout << "FILE:  " << item << endl;
         Mat origin_image, marked_image;
         if (calibrate_single_image(item, &origin_image, &marked_image)){
+            imshow("Preview", marked_image);
             cout << "OK:    success!" << endl;
         }else{
             cout << "Error: cannot calibrate this image!" << endl;
