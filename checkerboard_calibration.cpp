@@ -41,6 +41,7 @@ Mat Checkerboard_Calibration::get_undistort_image(int index){
     remap(view, rview, map1, map2, INTER_LINEAR);
     namedWindow(image_list[0], WINDOW_KEEPRATIO);
     imshow(image_list[0], rview);
+    waitKey(0);
 }
 
 void Checkerboard_Calibration::set_checkerboard_size(int row, int column){
